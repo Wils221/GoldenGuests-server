@@ -1,0 +1,18 @@
+[
+    {
+        "model": "golgenguestsapi.goldenguest",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "isTicketHolder": true
+        }
+    },
+    {
+        "model": "golgenguestsapi.goldenguest",
+        "pk": 2,
+        "fields": {
+            "user": 2,
+            "isTicketHolder": false
+        }
+    }
+]
