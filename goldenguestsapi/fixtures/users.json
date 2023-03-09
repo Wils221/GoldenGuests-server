@@ -1,0 +1,38 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "test1",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "TicketHolder1",
+            "first_name": "Ticket",
+            "last_name": "Holder",
+            "email": "th@th.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-08-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "test2",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Organization",
+            "first_name": "Org",
+            "last_name": "Test",
+            "email": "org@org.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-09-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]
