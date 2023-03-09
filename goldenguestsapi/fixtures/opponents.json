@@ -1,0 +1,19 @@
+[
+    {
+        "model": "golgenguestsapi.opponents",
+        "pk": 1,
+        "fields": {
+            "team": "Atlanta United FC"
+        }
+    },
+    {
+        "model": "golgenguestsapi.opponents",
+        "pk": 1,
+        "fields": {
+            "team": "Austin FC"
+        }
+    },
+    
+    
+
+]
