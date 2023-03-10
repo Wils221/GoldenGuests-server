@@ -1,0 +1,14 @@
+[
+    {
+        "model": "goldenguestsapi.ticket",
+        "pk": 1,
+        "fields": {
+            "section": 129,
+            "number_of_tickets":3,
+            "date": "2023-03-28",
+            "goldenguest": 1,
+            "opponent": 1
+
+        }
+    }
+]

@@ -1,0 +1,10 @@
+[
+    {
+        "model": "goldenguestsapi.orgticket",
+        "pk": 1,
+        "fields": {
+            "ticket": 1,
+            "goldenguest": 2
+        }
+    }
+]

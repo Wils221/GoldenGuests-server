@@ -1,198 +1,198 @@
 [
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 1,
         "fields": {
-            "team": "Test"
+            "opponent": "Test"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 2,
         "fields": {
-            "team": "Austin FC"
+            "opponent": "Austin FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 3,
         "fields": {
-            "team": "CF Montréal"
+            "opponent": "CF Montréal"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 4,
         "fields": {
-            "team": "Charlotte FC"
+            "opponent": "Charlotte FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 5,
         "fields": {
-            "team": "Chicago Fire FC"
+            "opponent": "Chicago Fire FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 6,
         "fields": {
-            "team": "Colorado Rapids"
+            "opponent": "Colorado Rapids"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 7,
         "fields": {
-            "team": "Columbus Crew"
+            "opponent": "Columbus Crew"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 8,
         "fields": {
-            "team": "D.C. United"
+            "opponent": "D.C. United"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 9,
         "fields": {
-            "team": "FC Cincinnati"
+            "opponent": "FC Cincinnati"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 10,
         "fields": {
-            "team": "FC Dallas"
+            "opponent": "FC Dallas"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 11,
         "fields": {
-            "team": "Houston Dynamo FC"
+            "opponent": "Houston Dynamo FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 12,
         "fields": {
-            "team": "Inter Miami CF"
+            "opponent": "Inter Miami CF"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 13,
         "fields": {
-            "team": "LA Galaxy"
+            "opponent": "LA Galaxy"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 14,
         "fields": {
-            "team": "Los Angeles FC"
+            "opponent": "Los Angeles FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 15,
         "fields": {
-            "team": "Minnesota United FC"
+            "opponent": "Minnesota United FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 16,
         "fields": {
-            "team": "New England Revolution"
+            "opponent": "New England Revolution"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 17,
         "fields": {
-            "team": "New York City FC"
+            "opponent": "New York City FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 18,
         "fields": {
-            "team": "New York Red Bulls"
+            "opponent": "New York Red Bulls"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 19,
         "fields": {
-            "team": "Orlando City SC"
+            "opponent": "Orlando City SC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 20,
         "fields": {
-            "team": "Philadelphia Union"
+            "opponent": "Philadelphia Union"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 21,
         "fields": {
-            "team": "Portland Timbers"
+            "opponent": "Portland Timbers"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 22,
         "fields": {
-            "team": "Real Salt Lake"
+            "opponent": "Real Salt Lake"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 23,
         "fields": {
-            "team": "San Jose Earthquakes"
+            "opponent": "San Jose Earthquakes"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 24,
         "fields": {
-            "team": "Seattle Sounders FC"
+            "opponent": "Seattle Sounders FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 25,
         "fields": {
-            "team": "Sporting Kansas City"
+            "opponent": "Sporting Kansas City"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 26,
         "fields": {
-            "team": "St. Louis City SC"
+            "opponent": "St. Louis City SC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 27,
         "fields": {
-            "team": "Toronto FC"
+            "opponent": "Toronto FC"
         }
     },
     {
-        "model": "golgenguestsapi.opponents",
+        "model": "goldenguestsapi.opponent",
         "pk": 28,
         "fields": {
-            "team": "Vancouver Whitecaps FC"
+            "opponent": "Vancouver Whitecaps FC"
         }
     }
 ]
