@@ -32,6 +32,11 @@ class TicketView(ViewSet):
 
         serializer = TicketSerializer(ticket)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    def destroy(self, request, pk):
+        ticket = Ticket.objects.get(pk=pk)
+        ticket.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 
 
 class TicketSerializer(serializers.ModelSerializer):
