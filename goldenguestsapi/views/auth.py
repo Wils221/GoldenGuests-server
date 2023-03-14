@@ -22,6 +22,7 @@ def login_user(request):
     authenticated_user = authenticate(username=username, password=password)
     goldenguest = GoldenGuest.objects.get(user=authenticated_user)
     is_ticket_holder = goldenguest.isTicketHolder
+    organization = goldenguest.organization
 
     # If authentication was successful, respond with their token
     if authenticated_user is not None:
@@ -29,7 +30,8 @@ def login_user(request):
         data = {
             'valid': True,
             'token': token.key,
-            'isTicketHolder': is_ticket_holder
+            'isTicketHolder': is_ticket_holder,
+            'organization': organization
         }
         return Response(data)
     else:
@@ -58,9 +60,10 @@ def register_user(request):
     # Now save the extra info in the goldenguestapi table
     goldenguest = GoldenGuest.objects.create(
         isTicketHolder=request.data['isTicketHolder'],
+        organization=request.data['organization'],
         user=new_user
     )
-
+    
     # Use the REST Framework's token generator on the new user account
     token = Token.objects.create(user=goldenguest.user)
     # Return the token to the client

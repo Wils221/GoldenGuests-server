@@ -21,6 +21,7 @@ class GoldenGuestView(ViewSet):
     def update(self, request, pk):
         goldenGuest = GoldenGuest.objects.get(pk=pk)
         goldenGuest.isTicketHolder = request.data["isTicketHolder"]
+        goldenGuest.organization = request.data["organization"]
         goldenGuest.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
@@ -35,5 +36,5 @@ class GoldenGuestSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GoldenGuest
-        fields = ('id', 'user', 'isTicketHolder')
+        fields = ('id', 'user', 'organization', 'isTicketHolder')
         depth = 1

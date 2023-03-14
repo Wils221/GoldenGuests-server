@@ -4,7 +4,9 @@
         "pk": 1,
         "fields": {
             "user": 1,
+            "organization": "null",
             "isTicketHolder": true
+            
         }
     },
     {
@@ -12,6 +14,7 @@
         "pk": 2,
         "fields": {
             "user": 2,
+            "organization":"Org 4 Kidz",
             "isTicketHolder": false
         }
     }
