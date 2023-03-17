@@ -19,8 +19,8 @@ class TicketView(ViewSet):
 
     def create(self, request):
 
-        goldenguest = GoldenGuest.objects.get(pk=request.data["GoldenGuest"])
-        opponent = Opponent.objects.get(pk=request.data["Opponent"])
+        goldenguest = GoldenGuest.objects.get(user=request.auth.user)
+        opponent = Opponent.objects.get(pk=request.data["opponent"])
 
         ticket = Ticket.objects.create(
             section=request.data["section"],

@@ -14,7 +14,7 @@ class OpponentView(ViewSet):
     def list(self, request):
         opponent = Opponent.objects.all()
         serializer = OpponentSerializer(opponent, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
     
     def destroy(self, request, pk):
         opponent = Opponent.objects.get(pk=pk)
