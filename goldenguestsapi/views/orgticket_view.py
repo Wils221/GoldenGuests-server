@@ -2,7 +2,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from goldenguestsapi.models import GoldenGuest,OrgTicket, Ticket
+from goldenguestsapi.models import GoldenGuest,OrgTicket, Ticket, Opponent
 
 
 class OrgTicketView(ViewSet):
@@ -19,7 +19,7 @@ class OrgTicketView(ViewSet):
 
     def create(self, request):
 
-        goldenguest = GoldenGuest.objects.get(pk=request.data["GoldenGuest"])
+        goldenguest = GoldenGuest.objects.get(user=request.data["GoldenGuest"])
         ticket = Ticket.objects.get(pk=request.data["Ticket"])
 
         orgTicket = OrgTicket.objects.create(
@@ -31,13 +31,25 @@ class OrgTicketView(ViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def destroy(self, request, pk):
-        orgTicket = OrgTicket.objects.get(pk=pk)
+        orgTicket = OrgTicket.objects.get(ticket=pk)
         orgTicket.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+class OpponentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Opponent
+        fields = ('id', 'opponent')
+    
+class TicketSerializer(serializers.ModelSerializer):
+    opponent=OpponentSerializer()
+    class Meta:
+        model = Ticket
+        fields = ('id', 'section', 'number_of_tickets', 'date', 'goldenguest', 'opponent')    
 
 
 class OrgTicketSerializer(serializers.ModelSerializer):
-
+    ticket=TicketSerializer()
     class Meta:
         model = OrgTicket
         fields = ('id', 'goldenguest', 'ticket')

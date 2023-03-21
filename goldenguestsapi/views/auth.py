@@ -24,6 +24,7 @@ def login_user(request):
     is_ticket_holder = goldenguest.isTicketHolder
     organization = goldenguest.organization
 
+
     # If authentication was successful, respond with their token
     if authenticated_user is not None:
         token = Token.objects.get(user=authenticated_user)
@@ -31,7 +32,7 @@ def login_user(request):
             'valid': True,
             'token': token.key,
             'isTicketHolder': is_ticket_holder,
-            'organization': organization
+            'user': token.user.id
         }
         return Response(data)
     else:
@@ -54,7 +55,8 @@ def register_user(request):
         username=request.data['username'],
         password=request.data['password'],
         first_name=request.data['first_name'],
-        last_name=request.data['last_name']
+        last_name=request.data['last_name'],
+        email=request.data['email']
     )
 
     # Now save the extra info in the goldenguestapi table
