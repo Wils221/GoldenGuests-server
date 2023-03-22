@@ -8,7 +8,7 @@
             "date": "2023-03-28",
             "goldenguest": 1,
             "opponent": 1,
-            "isOrgTicket": false
+            "isOrgTicket": true
 
         }
     }

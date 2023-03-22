@@ -13,8 +13,12 @@ class OrgTicketView(ViewSet):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def list(self, request):
-        orgTicket = OrgTicket.objects.all()
-        serializer = OrgTicketSerializer(orgTicket, many=True)
+        if "orguser" in request.query_params:
+            goldenguest = GoldenGuest.objects.get(user=request.query_params['orguser'])
+            orgTickets = OrgTicket.objects.filter(goldenguest=goldenguest)    
+        else:
+            orgTickets = OrgTicket.objects.all()
+        serializer = OrgTicketSerializer(orgTickets, many=True)
         return Response(serializer.data)
 
     def create(self, request):
@@ -31,9 +35,15 @@ class OrgTicketView(ViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     
     def destroy(self, request, pk):
-        orgTicket = OrgTicket.objects.get(ticket=pk)
+        orgTicket = OrgTicket.objects.get(pk=pk)
         orgTicket.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
+class GoldenGuestSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = GoldenGuest
+        fields = ('id', 'first_name', 'email')    
     
 class OpponentSerializer(serializers.ModelSerializer):
 
@@ -50,6 +60,7 @@ class TicketSerializer(serializers.ModelSerializer):
 
 class OrgTicketSerializer(serializers.ModelSerializer):
     ticket=TicketSerializer()
+    goldenguest=GoldenGuestSerializer()
     class Meta:
         model = OrgTicket
         fields = ('id', 'goldenguest', 'ticket')
